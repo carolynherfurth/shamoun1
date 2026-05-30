@@ -12,13 +12,9 @@
     --forest-mid:  #3A4E3B;
     --gold:        #B8935A;
     --gold-light:  #D4AD7A;
-    --gold-pale:   #EAD9C0;
     --white:       #FFFFFF;
-    --off-white:   #F5F2EC;
     --deep:        #1A1A18;
-    --muted:       #8A9E8B;
     --rule-light:  rgba(184,147,90,0.2);
-    --rule-dark:   rgba(184,147,90,0.15);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -56,15 +52,15 @@
   .nav-logo-word {
     font-family: 'Jost', sans-serif;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0.45em;
     text-transform: uppercase;
     color: var(--white);
   }
 
   .nav-logo-sub {
-    font-size: 7.5px;
-    letter-spacing: 0.38em;
+    font-size: 10px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--gold);
   }
@@ -76,10 +72,10 @@
   }
 
   .nav-links a {
-    font-size: 9px;
-    letter-spacing: 0.22em;
+    font-size: 11px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.5);
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -96,17 +92,6 @@
     overflow: hidden;
   }
 
-  /* Subtle grain overlay */
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    opacity: 0.4;
-    pointer-events: none;
-    z-index: 1;
-  }
-
   .hero-left {
     display: flex;
     flex-direction: column;
@@ -117,8 +102,8 @@
   }
 
   .hero-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 32px;
@@ -152,9 +137,9 @@
   }
 
   .hero-body {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.55);
     max-width: 420px;
     margin-bottom: 56px;
     opacity: 0;
@@ -172,12 +157,12 @@
 
   .hero-cta-primary {
     display: inline-block;
-    padding: 16px 48px;
+    padding: 18px 52px;
     background: var(--gold);
     color: var(--forest-deep);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 400;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     text-decoration: none;
     transition: background 0.3s;
@@ -186,10 +171,10 @@
   .hero-cta-primary:hover { background: var(--gold-light); }
 
   .hero-cta-secondary {
-    font-size: 9px;
-    letter-spacing: 0.2em;
+    font-size: 11px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.45);
     text-decoration: none;
     border-bottom: 1px solid rgba(184,147,90,0.3);
     padding-bottom: 4px;
@@ -217,7 +202,6 @@
     position: relative;
   }
 
-  /* Left edge fade so image blends into green */
   .hero-img-placeholder::before {
     content: '';
     position: absolute;
@@ -231,15 +215,15 @@
   .hero-img-placeholder::after {
     content: 'Place arrangement\Aphoto here';
     white-space: pre;
-    font-size: 10px;
-    letter-spacing: 0.15em;
+    font-size: 12px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.15);
     text-align: center;
   }
 
-  /* ── BRAND STATEMENT ── */
-  .brand-statement {
+  /* ── PHILOSOPHY ── */
+  .philosophy {
     background: var(--white);
     padding: 100px 80px;
     display: grid;
@@ -249,32 +233,34 @@
     border-bottom: 1px solid var(--rule-light);
   }
 
-  .brand-mark {
-    font-size: 9px;
-    letter-spacing: 0.38em;
+  .phil-mark {
+    font-size: 12px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 20px;
   }
 
-  .brand-pull {
+  .phil-pull {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(30px, 3vw, 44px);
+    font-size: clamp(28px, 2.8vw, 40px);
     font-weight: 300;
-    line-height: 1.25;
+    line-height: 1.3;
     color: var(--forest);
   }
 
-  .brand-pull em { font-style: italic; color: var(--gold); }
+  .phil-pull em { font-style: italic; color: var(--gold); }
 
-  .brand-right p {
-    font-size: 14px;
-    line-height: 1.9;
+  .philosophy-right p {
+    font-size: 16px;
+    line-height: 1.95;
     color: #5A5A56;
     margin-bottom: 20px;
   }
 
-  .brand-right strong {
+  .philosophy-right p:last-child { margin-bottom: 0; }
+
+  .philosophy-right strong {
     color: var(--forest);
     font-weight: 400;
   }
@@ -309,8 +295,8 @@
   }
 
   .story-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 48px;
@@ -318,7 +304,7 @@
 
   .story-text p {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(22px, 2.2vw, 30px);
+    font-size: clamp(24px, 2.4vw, 32px);
     font-weight: 300;
     line-height: 1.65;
     color: rgba(255,255,255,0.88);
@@ -327,9 +313,9 @@
 
   .story-text p.body {
     font-family: 'Jost', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.95;
-    color: rgba(255,255,255,0.42);
+    color: rgba(255,255,255,0.45);
     margin-bottom: 20px;
   }
 
@@ -338,21 +324,19 @@
   .story-right {
     display: flex;
     flex-direction: column;
-    gap: 0;
     padding-top: 58px;
   }
 
   .story-detail {
     border-left: 1px solid rgba(184,147,90,0.25);
-    padding: 0 0 40px 32px;
-    margin-bottom: 0;
+    padding: 0 0 44px 32px;
   }
 
   .story-detail:last-child { padding-bottom: 0; }
 
   .story-detail-label {
-    font-size: 8px;
-    letter-spacing: 0.35em;
+    font-size: 11px;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 14px;
@@ -360,7 +344,7 @@
 
   .story-detail-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 300;
     line-height: 1.55;
     color: rgba(255,255,255,0.6);
@@ -383,8 +367,8 @@
   }
 
   .gardens-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 20px;
@@ -401,10 +385,10 @@
   .gardens-headline em { font-style: italic; }
 
   .gardens-note {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.75;
     color: #8A8A84;
-    max-width: 260px;
+    max-width: 280px;
     text-align: right;
   }
 
@@ -430,7 +414,6 @@
 
   .garden-card:hover .garden-card-fill { transform: scale(1.05); }
 
-  /* Palette placeholders — each one a distinct garden mood */
   .gp-white    { background: linear-gradient(155deg, #D8D8D0 0%, #A8A898 100%); }
   .gp-inter    { background: linear-gradient(155deg, #6888C8 0%, #3858A0 100%); }
   .gp-safrica  { background: linear-gradient(155deg, #B87848 0%, #885828 100%); }
@@ -457,16 +440,16 @@
 
   .garden-card-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: var(--white);
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
   .garden-card-tag {
-    font-size: 7.5px;
-    letter-spacing: 0.28em;
+    font-size: 10px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--gold-light);
   }
@@ -477,8 +460,8 @@
   }
 
   .gardens-cta a {
-    font-size: 9px;
-    letter-spacing: 0.3em;
+    font-size: 12px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--forest);
     text-decoration: none;
@@ -506,8 +489,8 @@
   }
 
   .how-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 24px;
@@ -524,9 +507,9 @@
   .how-headline em { font-style: italic; color: var(--gold-light); }
 
   .how-intro {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
-    color: rgba(255,255,255,0.42);
+    color: rgba(255,255,255,0.45);
     align-self: end;
   }
 
@@ -556,17 +539,17 @@
   }
 
   .how-step-title {
-    font-size: 9px;
-    letter-spacing: 0.3em;
+    font-size: 11px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--gold-light);
     margin-bottom: 20px;
   }
 
   .how-step-body {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.85;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.48);
   }
 
   .how-tiers {
@@ -584,8 +567,8 @@
   }
 
   .how-tier-label {
-    font-size: 8px;
-    letter-spacing: 0.25em;
+    font-size: 10px;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--gold);
     padding-top: 5px;
@@ -595,16 +578,16 @@
 
   .how-tier-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
     color: var(--white);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .how-tier-body {
-    font-size: 13px;
-    line-height: 1.75;
-    color: rgba(255,255,255,0.4);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.42);
   }
 
   /* ── FOR WHOM ── */
@@ -620,8 +603,8 @@
   }
 
   .for-whom-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 56px;
@@ -646,10 +629,10 @@
   .for-whom-headline em { font-style: italic; }
 
   .for-whom-body {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
     color: #5A5A56;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .for-whom-callout {
@@ -660,8 +643,8 @@
   }
 
   .for-whom-callout-label {
-    font-size: 8px;
-    letter-spacing: 0.3em;
+    font-size: 10px;
+    letter-spacing: 0.26em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 12px;
@@ -669,7 +652,7 @@
 
   .for-whom-callout-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     font-style: italic;
     line-height: 1.55;
@@ -694,8 +677,8 @@
   }
 
   .cta-eyebrow {
-    font-size: 9px;
-    letter-spacing: 0.4em;
+    font-size: 12px;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 40px;
@@ -714,8 +697,8 @@
   .cta-headline em { font-style: italic; color: var(--gold-light); }
 
   .cta-sub {
-    font-size: 14px;
-    color: rgba(255,255,255,0.38);
+    font-size: 16px;
+    color: rgba(255,255,255,0.4);
     margin-bottom: 64px;
     line-height: 1.8;
   }
@@ -734,9 +717,9 @@
     padding: 18px 56px;
     background: var(--gold);
     color: var(--forest-deep);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 400;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     text-decoration: none;
     transition: background 0.3s;
@@ -749,8 +732,8 @@
     padding: 18px 56px;
     border: 1px solid rgba(184,147,90,0.3);
     color: rgba(255,255,255,0.45);
-    font-size: 9px;
-    letter-spacing: 0.3em;
+    font-size: 11px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     text-decoration: none;
     transition: border-color 0.3s, color 0.3s;
@@ -763,9 +746,9 @@
 
   .cta-note {
     margin-top: 40px;
-    font-size: 11px;
-    color: rgba(255,255,255,0.2);
-    letter-spacing: 0.08em;
+    font-size: 13px;
+    color: rgba(255,255,255,0.22);
+    letter-spacing: 0.06em;
     position: relative;
     z-index: 1;
   }
@@ -781,9 +764,9 @@
   }
 
   .footer-left {
-    font-size: 11px;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.05em;
+    font-size: 13px;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.04em;
     line-height: 1.8;
   }
 
@@ -792,16 +775,16 @@
   .footer-logo-word {
     font-family: 'Jost', sans-serif;
     font-weight: 200;
-    font-size: 13px;
-    letter-spacing: 0.42em;
+    font-size: 15px;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--white);
     display: block;
   }
 
   .footer-logo-sub {
-    font-size: 7px;
-    letter-spacing: 0.32em;
+    font-size: 10px;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--gold);
     display: block;
@@ -810,9 +793,9 @@
 
   .footer-right {
     text-align: right;
-    font-size: 11px;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.05em;
+    font-size: 13px;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.04em;
     line-height: 1.9;
   }
 
@@ -844,10 +827,11 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 960px) {
     nav { padding: 18px 28px; }
+    .nav-links { gap: 24px; }
     .hero { grid-template-columns: 1fr; }
     .hero-left { padding: 120px 32px 60px; }
     .hero-right { height: 60vw; }
-    .brand-statement { grid-template-columns: 1fr; gap: 36px; padding: 72px 32px; }
+    .philosophy { grid-template-columns: 1fr; gap: 36px; padding: 72px 32px; }
     .story { padding: 80px 32px; }
     .story-inner { grid-template-columns: 1fr; gap: 56px; }
     .gardens { padding: 80px 32px; }
@@ -887,13 +871,12 @@
   <div class="hero-left">
     <div class="hero-eyebrow">Skyline Garden · New York City</div>
     <h1 class="hero-headline">
-      Your home should<br>
-      feel as <em>alive</em> as<br>
-      the city outside it.
+      Outside, the city.<br>
+      Inside, <em>calm.</em>
     </h1>
     <div class="hero-rule"></div>
     <p class="hero-body">
-      Bespoke floral arrangements for New Yorkers who want beauty that surprises them. Not a formula. A point of view — shaped by a lifetime of collecting beauty across the world.
+      New York demands everything. Home is where you exhale. Skyline Garden creates bespoke floral arrangements that transform any residence into a sanctuary — beautiful, considered, and entirely your own.
     </p>
     <div class="hero-cta-row">
       <a href="#inquire" class="hero-cta-primary">Inquire About a Subscription</a>
@@ -907,22 +890,22 @@
   </div>
 </section>
 
-<!-- BRAND STATEMENT -->
-<section class="brand-statement">
+<!-- PHILOSOPHY -->
+<section class="philosophy">
   <div class="reveal">
-    <div class="brand-mark">The Difference</div>
-    <h2 class="brand-pull">
-      I've been collecting<br>
-      beauty my whole life.<br>
-      <em>Now I deliver it.</em>
+    <div class="phil-mark">The Philosophy</div>
+    <h2 class="phil-pull">
+      The city and nature,<br>
+      brought into<br>
+      <em>equilibrium.</em>
     </h2>
   </div>
-  <div class="brand-right reveal d2">
+  <div class="philosophy-right reveal d2">
     <p>
-      Most florists have a formula. Skyline Garden has a <strong>point of view</strong>. Every arrangement Shamoun creates carries the eye of someone who has moved between continents, absorbed color and form from cultures most people only visit, and spent twenty years looking out at one of the most dramatic skylines on earth.
+      The Skyline represents the big city — its energy, its scale, its ambition. The Garden represents nature — its beauty, its tranquility, its stillness. <strong>Skyline Garden's arrangements bring both together,</strong> creating a sense of harmony in the spaces where life is actually lived.
     </p>
     <p>
-      The result is arrangements that feel <strong>unexpected</strong> — combinations that shouldn't work, and stop the room when they do. Not paint-by-numbers. Not safe. Something that makes you look twice and keeps you looking.
+      In Manhattan, Shamoun's living room is his garden. There is always an arrangement — often several — and the room is better for it. More interesting. More welcoming. More alive. That is what he brings to every home he works with.
     </p>
   </div>
 </section>
@@ -933,10 +916,10 @@
     <div class="reveal">
       <div class="story-eyebrow">The Story</div>
       <div class="story-text">
-        <p>I live forty floors above 42nd Street. I look out at the Empire State Building every day.</p>
-        <p>And for years, I've filled my home with arrangements that match what I see out that window — <em>unexpected, alive, a little bit stunning.</em></p>
-        <p class="body">Friends would come over and ask: who does your flowers? I'd say: I do. And then I'd show up at their place and do theirs too — armfuls of something they hadn't seen before, arranged right there, for the room, for the light, for the person who lived there.</p>
-        <p class="body">After thirty years in finance — and a lifetime moving between Jordan, Montreal, California, and New York — I realized I'd been collecting beauty everywhere I went. It was time to share it.</p>
+        <p>Shamoun lives on the 44th floor above 42nd Street, looking out at the Empire State Building every day.</p>
+        <p>For years, he has filled his home with arrangements that match what he sees out that window — <em>unexpected, alive, a little bit stunning.</em></p>
+        <p class="body">Friends would come over and ask: who does your flowers? He would say: I do. And then he would show up at their place and do theirs too — armfuls of something they hadn't seen before, arranged right there, for the room, for the light, for the person who lived there.</p>
+        <p class="body">Shamoun has spent a lifetime collecting beauty from every place he has lived and every place he has been. Now he brings it to your door.</p>
       </div>
     </div>
     <div class="story-right reveal d2">
@@ -950,7 +933,7 @@
       </div>
       <div class="story-detail">
         <div class="story-detail-label">The Invitation</div>
-        <p class="story-detail-text">If your home doesn't yet feel the way this city feels — I can fix that.</p>
+        <p class="story-detail-text">If your home doesn't yet feel the way it deserves to — Shamoun can change that.</p>
       </div>
     </div>
   </div>
@@ -961,7 +944,7 @@
   <div class="gardens-header reveal">
     <div>
       <div class="gardens-eyebrow">The Collection</div>
-      <h2 class="gardens-headline">A tour of<br>our <em>gardens.</em></h2>
+      <h2 class="gardens-headline">A tour of<br>the <em>gardens.</em></h2>
     </div>
     <p class="gardens-note">Every arrangement reflects the world Shamoun carries with him — no two exactly alike, each one made for the moment and the season.</p>
   </div>
@@ -1033,21 +1016,21 @@
   <div class="how-inner">
     <div class="how-top">
       <div class="reveal">
-        <div class="how-eyebrow">How It Works</div>
-        <h2 class="how-headline">Simple.<br>Unhurried.<br><em>Extraordinary.</em></h2>
+        <div class="how-eyebrow">The Experience</div>
+        <h2 class="how-headline">Tailored.<br>Thoughtful.<br><em>Extraordinary.</em></h2>
       </div>
-      <p class="how-intro reveal d2">This is a relationship, not a transaction. Shamoun takes on a small number of clients at a time — residential and corporate — to ensure every arrangement receives the attention it deserves.</p>
+      <p class="how-intro reveal d2">Skyline Garden cultivates an elevated, lasting relationship with each client — residential and corporate — built on beauty, care, and an uncompromising standard for what a space can feel like.</p>
     </div>
     <div class="how-steps">
       <div class="how-step reveal">
         <div class="how-step-n">1</div>
-        <div class="how-step-title">We Talk</div>
-        <p class="how-step-body">A brief conversation about your space, your eye, what moves you. Or you tell Shamoun nothing and trust him entirely. Both work beautifully.</p>
+        <div class="how-step-title">A Conversation</div>
+        <p class="how-step-body">Shamoun takes time to understand your space, your eye, what moves you. Or you trust him entirely. Both work beautifully.</p>
       </div>
       <div class="how-step reveal d1">
         <div class="how-step-n">2</div>
         <div class="how-step-title">He Creates</div>
-        <p class="how-step-body">Each arrangement is considered, not fulfilled. Sourced for the season. Composed for your room. Never a standard order.</p>
+        <p class="how-step-body">Each arrangement is considered, not fulfilled. Sourced for the season. Composed for your room. An expression of genuine vision.</p>
       </div>
       <div class="how-step reveal d2">
         <div class="how-step-n">3</div>
@@ -1060,14 +1043,14 @@
         <div class="how-tier-label">Tier 01</div>
         <div>
           <div class="how-tier-name">Deluxe</div>
-          <p class="how-tier-body">Elegant, high-quality arrangements. For residential and corporate clients who want consistent, considered beauty.</p>
+          <p class="how-tier-body">Elegant, high-quality arrangements for residential and corporate clients who want consistent, considered beauty in their spaces.</p>
         </div>
       </div>
       <div class="how-tier reveal d2">
         <div class="how-tier-label">Tier 02</div>
         <div>
           <div class="how-tier-name">Premium Deluxe</div>
-          <p class="how-tier-body">Statement pieces. Elevated, lush flowers. The arrangement that makes the room go quiet for a moment when you walk in.</p>
+          <p class="how-tier-body">Statement pieces. Elevated, lush flowers. The arrangement that commands a room the moment you walk in.</p>
         </div>
       </div>
     </div>
@@ -1080,15 +1063,14 @@
     <div class="for-whom-eyebrow reveal">Who This Is For</div>
     <div class="for-whom-grid">
       <div class="reveal">
-        <h2 class="for-whom-headline">For the person whose life is full — and whose home should <em>feel</em> that way.</h2>
-        <p class="for-whom-body">You've built something real. You move between this city and somewhere else. When you're here, you want your apartment to feel like you — not like a hotel, not like an afterthought.</p>
-        <p class="for-whom-body">You've walked into someone's home and felt it. That thing a room has when someone with genuine taste has touched it. You want that. Not generically. Specifically, surprisingly, yours.</p>
-        <p class="for-whom-body">Skyline Garden serves both residential and corporate clients — those who want their home or office alive with something that says something about who they are.</p>
+        <h2 class="for-whom-headline">For the person whose life is rich — and whose home <em>reflects that story.</em></h2>
+        <p class="for-whom-body">You've made a life worth coming home to. You move between this city and somewhere else. When you're here, your apartment deserves to feel like you — considered, specific, alive.</p>
+        <p class="for-whom-body">You've walked into someone's home and felt it. That quality a room has when someone with genuine taste has touched it. Skyline Garden brings that to yours.</p>
       </div>
       <div class="reveal d2">
         <div class="for-whom-callout">
           <div class="for-whom-callout-label">Residential</div>
-          <p class="for-whom-callout-text">Your home, your garden. Weekly arrangements that make your apartment feel like the life you've built.</p>
+          <p class="for-whom-callout-text">Your home, your garden. Arrangements that make your apartment feel like the life you've built.</p>
         </div>
         <div class="for-whom-callout">
           <div class="for-whom-callout-label">Corporate</div>
@@ -1096,7 +1078,7 @@
         </div>
         <div class="for-whom-callout">
           <div class="for-whom-callout-label">Gift</div>
-          <p class="for-whom-callout-text">Treat yourself, or someone who deserves something they wouldn't have ordered for themselves.</p>
+          <p class="for-whom-callout-text">For someone who deserves something they wouldn't have chosen for themselves.</p>
         </div>
       </div>
     </div>
@@ -1107,7 +1089,7 @@
 <section class="cta-section" id="inquire">
   <div class="cta-eyebrow reveal">Limited Availability · Manhattan</div>
   <h2 class="cta-headline reveal">Your home is waiting<br>to feel <em>alive.</em></h2>
-  <p class="cta-sub reveal">Shamoun takes on a small number of clients at a time.<br>If you're ready to talk, he'd love to hear from you.</p>
+  <p class="cta-sub reveal">Shamoun works with a small number of clients at a time.<br>If you're ready, he'd love to hear from you.</p>
   <div class="cta-buttons reveal">
     <a href="mailto:info@skylinegardenny.com" class="cta-btn-primary">Begin the Conversation</a>
     <a href="https://www.skylinegardenny.com" target="_blank" class="cta-btn-secondary">Visit the Website</a>

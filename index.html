@@ -238,8 +238,6 @@
     align-items: start;
   }
 
-  .story-left {}
-
   .story-eyebrow {
     font-size: 12px;
     letter-spacing: 0.3em;
@@ -325,6 +323,7 @@
     overflow: hidden;
     background: var(--forest-mid);
     cursor: pointer;
+    text-decoration: none;
   }
 
   .garden-card-fill {
@@ -608,16 +607,7 @@
     line-height: 1.8;
   }
 
-  .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-btn-primary {
+  .cta-btn {
     display: inline-block;
     padding: 18px 56px;
     background: var(--gold);
@@ -628,26 +618,11 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: background 0.3s;
+    position: relative;
+    z-index: 1;
   }
 
-  .cta-btn-primary:hover { background: var(--gold-light); }
-
-  .cta-btn-secondary {
-    display: inline-block;
-    padding: 18px 56px;
-    border: 1px solid rgba(184,147,90,0.3);
-    color: rgba(255,255,255,0.45);
-    font-size: 11px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: border-color 0.3s, color 0.3s;
-  }
-
-  .cta-btn-secondary:hover {
-    border-color: var(--gold);
-    color: var(--white);
-  }
+  .cta-btn:hover { background: var(--gold-light); }
 
   .cta-note {
     margin-top: 40px;
@@ -764,7 +739,7 @@
     <li><a href="#story">About</a></li>
     <li><a href="#gardens">Our Gardens</a></li>
     <li><a href="#how">How It Works</a></li>
-    <li><a href="#inquire">Inquire</a></li>
+    <li><a href="https://www.skylinegardenny.com">Shop</a></li>
   </ul>
 </nav>
 
@@ -781,8 +756,8 @@
       New York demands everything. Home is where you exhale. Skyline Garden creates bespoke floral arrangements that transform any home into a sanctuary — beautiful, alive, and entirely yours.
     </p>
     <div class="hero-cta-row">
-      <a href="#inquire" class="hero-cta-primary">Inquire About a Subscription</a>
-      <a href="#gardens" class="hero-cta-secondary">Tour the Gardens →</a>
+      <a href="https://www.skylinegardenny.com" class="hero-cta-primary">Choose Your Garden</a>
+      <a href="#story" class="hero-cta-secondary">The Story →</a>
     </div>
   </div>
   <div class="hero-right">
@@ -799,14 +774,13 @@
       <div class="story-eyebrow">The Story</div>
       <h2 class="story-pull">
         The city and nature,<br>
-        brought into<br>
-        <em>equilibrium.</em>
+        brought into <em>equilibrium.</em>
       </h2>
     </div>
     <div class="story-right reveal d2">
       <p>The Skyline represents the big city — its energy, its scale, its ambition. The Garden represents nature — its beauty, its tranquility, its stillness. <strong>Skyline Garden's arrangements bring both together,</strong> creating a sense of harmony in the spaces you return to.</p>
-      <p>Shamoun lives on the 44th floor above 42nd Street, looking out at the Empire State Building every day. For years, he has filled his home with arrangements that match what he sees out that window — unexpected, alive, a little bit stunning. The arrangements he makes for clients carry the same attention he has always given to the people closest to him — for the room, for the light, for the person who lives there.</p>
-      <p>Six continents. Thirty years of noticing. Every place left something — a color, a form, a way of seeing. For those who want their home to reflect not just taste, but a point of view shaped by the world.</p>
+      <p>Shamoun lives on the 44th floor above 42nd Street, looking out at the Empire State Building every day. For years, he has filled his home with arrangements that match what he sees out that window — unexpected, alive, a little bit stunning. In Manhattan, his living room is his garden. There is always an arrangement — often several — and everyone who walks in feels it.</p>
+      <p>The arrangements he makes for clients carry the same attention he has always given to the people closest to him — for the room, for the energy, for the person who lives there. Six continents. Thirty years of noticing. Every place left something — a color, a form, a way of seeing. For those who want their home to reflect not just taste, but a point of view shaped by the world.</p>
     </div>
   </div>
 </section>
@@ -821,65 +795,65 @@
     <p class="gardens-note">Every arrangement reflects the world Shamoun carries with him — no two exactly alike, each one made for the moment and the season.</p>
   </div>
   <div class="gardens-grid">
-    <div class="garden-card reveal">
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal">
       <div class="garden-card-fill gp-white"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Shades of White</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal d1">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal d1">
       <div class="garden-card-fill gp-inter"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Intercontinental</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal d2">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal d2">
       <div class="garden-card-fill gp-safrica"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">South African</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal d3">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal d3">
       <div class="garden-card-fill gp-tropical"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Tropical</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal">
       <div class="garden-card-fill gp-peonies"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Peonies</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal d1">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal d1">
       <div class="garden-card-fill gp-yellow"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Shades of Yellow</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal d2">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal d2">
       <div class="garden-card-fill gp-summer"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Summer</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
-    <div class="garden-card reveal d3">
+    </a>
+    <a href="https://www.skylinegardenny.com" class="garden-card reveal d3">
       <div class="garden-card-fill gp-palm"></div>
       <div class="garden-card-overlay">
         <div class="garden-card-name">Palm Springs</div>
         <div class="garden-card-tag">Garden</div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="gardens-cta reveal">
-    <a href="https://www.skylinegardenny.com" target="_blank">View the Complete Collection at skylinegardenny.com →</a>
+    <a href="https://www.skylinegardenny.com" target="_blank">View the Complete Collection →</a>
   </div>
 </section>
 
@@ -896,18 +870,18 @@
     <div class="how-steps">
       <div class="how-step reveal">
         <div class="how-step-n">1</div>
-        <div class="how-step-title">A Conversation</div>
-        <p class="how-step-body">Shamoun takes time to understand your space, your eye, what moves you. Or you trust him entirely. Both work beautifully.</p>
+        <div class="how-step-title">Choose Your Garden</div>
+        <p class="how-step-body">Browse the collection and select the world that speaks to you — Peonies, Shades of Yellow, Tropical, and more.</p>
       </div>
       <div class="how-step reveal d1">
         <div class="how-step-n">2</div>
         <div class="how-step-title">He Creates</div>
-        <p class="how-step-body">Each arrangement is considered, not fulfilled. Sourced for the season. Composed for your room. An expression of genuine vision.</p>
+        <p class="how-step-body">Shamoun sources and composes each arrangement fresh — for the season, for your room, for the person who lives there.</p>
       </div>
       <div class="how-step reveal d2">
         <div class="how-step-n">3</div>
         <div class="how-step-title">It Arrives</div>
-        <p class="how-step-body">Delivered to your door — sometimes arranged on the spot. Always an entrance. Recurring weekly, biweekly, or monthly — or one-time with 2-day notice.</p>
+        <p class="how-step-body">Delivered to your door. Recurring weekly, biweekly, or monthly — or one-time with 2-day advance notice.</p>
       </div>
     </div>
     <div class="how-tiers">
@@ -915,7 +889,7 @@
         <div class="how-tier-label">Tier 01</div>
         <div>
           <div class="how-tier-name">Deluxe</div>
-          <p class="how-tier-body">Elegant, high-quality arrangements for those who want consistent, considered beauty in their spaces.</p>
+          <p class="how-tier-body">Elegant, high-quality arrangements for those who want consistent, beautiful presence in their spaces.</p>
         </div>
       </div>
       <div class="how-tier reveal d2">
@@ -934,7 +908,7 @@
   <div class="for-whom-inner">
     <div class="reveal">
       <h2 class="for-whom-headline">For the person whose life is rich — and whose home <em>reflects that story.</em></h2>
-      <p class="for-whom-body">You've made a life worth coming home to. When you're here, your home deserves to feel like you — considered, specific, alive.</p>
+      <p class="for-whom-body">You've made a life worth coming home to. When you're here, your home deserves to feel like you — alive and entirely yours.</p>
       <p class="for-whom-body">You've walked into someone's home and felt it. That quality a room has when someone with genuine taste has touched it. Skyline Garden brings that to yours.</p>
     </div>
     <div class="reveal d2">
@@ -957,11 +931,8 @@
 <!-- CTA -->
 <section class="cta-section" id="inquire">
   <h2 class="cta-headline reveal">Your home is waiting<br>to feel <em>alive.</em></h2>
-  <p class="cta-sub reveal">Shamoun works with a small number of clients at a time.<br>If you're ready, he'd love to hear from you.</p>
-  <div class="cta-buttons reveal">
-    <a href="mailto:info@skylinegardenny.com" class="cta-btn-primary">Begin the Conversation</a>
-    <a href="https://www.skylinegardenny.com" target="_blank" class="cta-btn-secondary">Visit the Website</a>
-  </div>
+  <p class="cta-sub reveal">Choose the garden that speaks to you.</p>
+  <a href="https://www.skylinegardenny.com" class="cta-btn reveal">Choose Your Garden</a>
   <p class="cta-note reveal">info@skylinegardenny.com &nbsp;·&nbsp; (917) 544-2211 &nbsp;·&nbsp; @skylinegardenny</p>
 </section>
 

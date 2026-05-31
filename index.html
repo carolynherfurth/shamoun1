@@ -222,26 +222,33 @@
     text-align: center;
   }
 
-  /* ── PHILOSOPHY ── */
-  .philosophy {
+  /* ── STORY ── */
+  .story {
     background: var(--white);
-    padding: 100px 80px;
-    display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: 80px;
-    align-items: center;
+    padding: 120px 80px;
     border-bottom: 1px solid var(--rule-light);
   }
 
-  .phil-mark {
+  .story-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 120px;
+    align-items: start;
+  }
+
+  .story-left {}
+
+  .story-eyebrow {
     font-size: 12px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
-  .phil-pull {
+  .story-pull {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(28px, 2.8vw, 40px);
     font-weight: 300;
@@ -249,111 +256,25 @@
     color: var(--forest);
   }
 
-  .phil-pull em { font-style: italic; color: var(--gold); }
+  .story-pull em { font-style: italic; color: var(--gold); }
 
-  .philosophy-right p {
+  .story-right p {
     font-size: 16px;
     line-height: 1.95;
     color: #5A5A56;
     margin-bottom: 20px;
   }
 
-  .philosophy-right p:last-child { margin-bottom: 0; }
+  .story-right p:last-child { margin-bottom: 0; }
 
-  .philosophy-right strong {
+  .story-right strong {
     color: var(--forest);
     font-weight: 400;
   }
 
-  /* ── STORY ── */
-  .story {
-    background: var(--forest-deep);
-    padding: 120px 80px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .story::after {
-    content: '';
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(184,147,90,0.07) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .story-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 120px;
-    align-items: start;
-    position: relative;
-    z-index: 1;
-  }
-
-  .story-eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 48px;
-  }
-
-  .story-text p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(24px, 2.4vw, 32px);
-    font-weight: 300;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.88);
-    margin-bottom: 28px;
-  }
-
-  .story-text p.body {
-    font-family: 'Jost', sans-serif;
-    font-size: 16px;
-    line-height: 1.95;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 20px;
-  }
-
-  .story-text em { font-style: italic; color: var(--gold-light); }
-
-  .story-right {
-    display: flex;
-    flex-direction: column;
-    padding-top: 58px;
-  }
-
-  .story-detail {
-    border-left: 1px solid rgba(184,147,90,0.25);
-    padding: 0 0 44px 32px;
-  }
-
-  .story-detail:last-child { padding-bottom: 0; }
-
-  .story-detail-label {
-    font-size: 11px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 14px;
-  }
-
-  .story-detail-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 1.55;
-    color: rgba(255,255,255,0.6);
-    font-style: italic;
-  }
-
   /* ── GARDENS ── */
   .gardens {
-    background: var(--white);
+    background: var(--forest-deep);
     padding: 120px 80px;
   }
 
@@ -363,7 +284,7 @@
     align-items: flex-end;
     margin-bottom: 64px;
     padding-bottom: 40px;
-    border-bottom: 1px solid var(--rule-light);
+    border-bottom: 1px solid rgba(184,147,90,0.15);
   }
 
   .gardens-eyebrow {
@@ -379,15 +300,15 @@
     font-size: clamp(36px, 4vw, 56px);
     font-weight: 300;
     line-height: 1.1;
-    color: var(--forest);
+    color: var(--white);
   }
 
-  .gardens-headline em { font-style: italic; }
+  .gardens-headline em { font-style: italic; color: var(--gold-light); }
 
   .gardens-note {
     font-size: 14px;
     line-height: 1.75;
-    color: #8A8A84;
+    color: rgba(255,255,255,0.35);
     max-width: 280px;
     text-align: right;
   }
@@ -463,19 +384,23 @@
     font-size: 12px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--forest);
+    color: rgba(255,255,255,0.45);
     text-decoration: none;
-    border-bottom: 1px solid var(--gold);
+    border-bottom: 1px solid rgba(184,147,90,0.3);
     padding-bottom: 5px;
-    transition: color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
   }
 
-  .gardens-cta a:hover { color: var(--gold); }
+  .gardens-cta a:hover {
+    color: var(--gold-light);
+    border-color: var(--gold);
+  }
 
   /* ── HOW ── */
   .how {
-    background: var(--forest);
+    background: var(--white);
     padding: 120px 80px;
+    border-top: 1px solid var(--rule-light);
   }
 
   .how-inner { max-width: 1100px; margin: 0 auto; }
@@ -501,15 +426,15 @@
     font-size: clamp(36px, 4vw, 54px);
     font-weight: 300;
     line-height: 1.1;
-    color: var(--white);
+    color: var(--forest);
   }
 
-  .how-headline em { font-style: italic; color: var(--gold-light); }
+  .how-headline em { font-style: italic; color: var(--gold); }
 
   .how-intro {
     font-size: 16px;
     line-height: 1.9;
-    color: rgba(255,255,255,0.45);
+    color: #5A5A56;
     align-self: end;
   }
 
@@ -521,7 +446,7 @@
   }
 
   .how-step {
-    background: var(--forest-mid);
+    background: #F0EDE6;
     padding: 52px 44px 60px;
     position: relative;
   }
@@ -531,7 +456,7 @@
     font-size: 80px;
     font-weight: 300;
     color: var(--gold);
-    opacity: 0.1;
+    opacity: 0.12;
     position: absolute;
     top: 16px; right: 24px;
     line-height: 1;
@@ -542,14 +467,14 @@
     font-size: 11px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--gold-light);
+    color: var(--forest);
     margin-bottom: 20px;
   }
 
   .how-step-body {
     font-size: 15px;
     line-height: 1.85;
-    color: rgba(255,255,255,0.48);
+    color: #6A6A64;
   }
 
   .how-tiers {
@@ -559,7 +484,7 @@
   }
 
   .how-tier {
-    background: var(--forest-mid);
+    background: #F0EDE6;
     padding: 40px 44px;
     display: flex;
     gap: 24px;
@@ -580,37 +505,25 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     font-weight: 400;
-    color: var(--white);
+    color: var(--forest);
     margin-bottom: 10px;
   }
 
   .how-tier-body {
     font-size: 14px;
     line-height: 1.8;
-    color: rgba(255,255,255,0.42);
+    color: #6A6A64;
   }
 
   /* ── FOR WHOM ── */
   .for-whom {
-    background: var(--white);
+    background: var(--forest);
     padding: 120px 80px;
-    border-top: 1px solid var(--rule-light);
   }
 
   .for-whom-inner {
     max-width: 1100px;
     margin: 0 auto;
-  }
-
-  .for-whom-eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 56px;
-  }
-
-  .for-whom-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 100px;
@@ -622,21 +535,21 @@
     font-size: clamp(32px, 3.5vw, 50px);
     font-weight: 300;
     line-height: 1.15;
-    color: var(--forest);
+    color: var(--white);
     margin-bottom: 36px;
   }
 
-  .for-whom-headline em { font-style: italic; }
+  .for-whom-headline em { font-style: italic; color: var(--gold-light); }
 
   .for-whom-body {
     font-size: 16px;
     line-height: 1.9;
-    color: #5A5A56;
+    color: rgba(255,255,255,0.45);
     margin-bottom: 20px;
   }
 
   .for-whom-callout {
-    border: 1px solid rgba(44,59,45,0.12);
+    border: 1px solid rgba(184,147,90,0.15);
     border-left: 3px solid var(--gold);
     padding: 28px 32px;
     margin-bottom: 3px;
@@ -656,7 +569,7 @@
     font-weight: 300;
     font-style: italic;
     line-height: 1.55;
-    color: var(--forest);
+    color: rgba(255,255,255,0.7);
   }
 
   /* ── CTA ── */
@@ -674,14 +587,6 @@
     inset: 0;
     background: radial-gradient(ellipse at center, rgba(184,147,90,0.09) 0%, transparent 65%);
     pointer-events: none;
-  }
-
-  .cta-eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 40px;
   }
 
   .cta-headline {
@@ -766,7 +671,6 @@
   .footer-left {
     font-size: 13px;
     color: rgba(255,255,255,0.28);
-    letter-spacing: 0.04em;
     line-height: 1.8;
   }
 
@@ -795,7 +699,6 @@
     text-align: right;
     font-size: 13px;
     color: rgba(255,255,255,0.28);
-    letter-spacing: 0.04em;
     line-height: 1.9;
   }
 
@@ -831,9 +734,8 @@
     .hero { grid-template-columns: 1fr; }
     .hero-left { padding: 120px 32px 60px; }
     .hero-right { height: 60vw; }
-    .philosophy { grid-template-columns: 1fr; gap: 36px; padding: 72px 32px; }
     .story { padding: 80px 32px; }
-    .story-inner { grid-template-columns: 1fr; gap: 56px; }
+    .story-inner { grid-template-columns: 1fr; gap: 48px; }
     .gardens { padding: 80px 32px; }
     .gardens-header { flex-direction: column; align-items: flex-start; gap: 16px; }
     .gardens-note { text-align: left; max-width: none; }
@@ -843,7 +745,7 @@
     .how-steps { grid-template-columns: 1fr; }
     .how-tiers { grid-template-columns: 1fr; }
     .for-whom { padding: 80px 32px; }
-    .for-whom-grid { grid-template-columns: 1fr; gap: 48px; }
+    .for-whom-inner { grid-template-columns: 1fr; gap: 48px; }
     .cta-section { padding: 100px 32px; }
     footer { grid-template-columns: 1fr; gap: 24px; padding: 40px 32px; text-align: center; }
     .footer-right { text-align: center; }
@@ -890,51 +792,21 @@
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
-<section class="philosophy">
-  <div class="reveal">
-    <div class="phil-mark">The Philosophy</div>
-    <h2 class="phil-pull">
-      The city and nature,<br>
-      brought into<br>
-      <em>equilibrium.</em>
-    </h2>
-  </div>
-  <div class="philosophy-right reveal d2">
-    <p>
-      The Skyline represents the big city — its energy, its scale, its ambition. The Garden represents nature — its beauty, its tranquility, its stillness. <strong>Skyline Garden's arrangements bring both together,</strong> creating a sense of harmony in the spaces you return to.
-    </p>
-    <p>
-      In Manhattan, Shamoun's living room is his garden. There is always an arrangement — often several — and the room is better for it. More interesting. More welcoming. More alive. That is what he brings to every home he works with.
-    </p>
-  </div>
-</section>
-
 <!-- STORY -->
 <section class="story" id="story">
   <div class="story-inner">
     <div class="reveal">
       <div class="story-eyebrow">The Story</div>
-      <div class="story-text">
-        <p>Shamoun lives on the 44th floor above 42nd Street, looking out at the Empire State Building every day.</p>
-        <p>For years, he has filled his home with arrangements that match what he sees out that window — <em>unexpected, alive, a little bit stunning.</em></p>
-        <p class="body">The arrangements Shamoun makes for clients carry the same attention he has always given to the people closest to him — for the room, for the light, for the person who lives there.</p>
-        <p class="body">Shamoun has spent a lifetime collecting beauty from every place he has lived and every place he has been. Now he brings it to your door.</p>
-      </div>
+      <h2 class="story-pull">
+        The city and nature,<br>
+        brought into<br>
+        <em>equilibrium.</em>
+      </h2>
     </div>
     <div class="story-right reveal d2">
-      <div class="story-detail">
-        <div class="story-detail-label">The Name</div>
-        <p class="story-detail-text">Skyline — the energy and ambition of the city. Garden — the beauty and stillness of nature. Both, inside your home.</p>
-      </div>
-      <div class="story-detail">
-        <div class="story-detail-label">The Eye</div>
-        <p class="story-detail-text">Six continents. Thirty years of noticing. Every place left something — a color, a form, a way of seeing.</p>
-      </div>
-      <div class="story-detail">
-        <div class="story-detail-label">The Invitation</div>
-        <p class="story-detail-text">For those who want their home to reflect not just taste, but a point of view shaped by the world.</p>
-      </div>
+      <p>The Skyline represents the big city — its energy, its scale, its ambition. The Garden represents nature — its beauty, its tranquility, its stillness. <strong>Skyline Garden's arrangements bring both together,</strong> creating a sense of harmony in the spaces you return to.</p>
+      <p>Shamoun lives on the 44th floor above 42nd Street, looking out at the Empire State Building every day. For years, he has filled his home with arrangements that match what he sees out that window — unexpected, alive, a little bit stunning. The arrangements he makes for clients carry the same attention he has always given to the people closest to him — for the room, for the light, for the person who lives there.</p>
+      <p>Six continents. Thirty years of noticing. Every place left something — a color, a form, a way of seeing. For those who want their home to reflect not just taste, but a point of view shaped by the world.</p>
     </div>
   </div>
 </section>
@@ -1043,7 +915,7 @@
         <div class="how-tier-label">Tier 01</div>
         <div>
           <div class="how-tier-name">Deluxe</div>
-          <p class="how-tier-body">Elegant, high-quality arrangements for residential and corporate clients who want consistent, considered beauty in their spaces.</p>
+          <p class="how-tier-body">Elegant, high-quality arrangements for those who want consistent, considered beauty in their spaces.</p>
         </div>
       </div>
       <div class="how-tier reveal d2">
@@ -1060,26 +932,23 @@
 <!-- FOR WHOM -->
 <section class="for-whom">
   <div class="for-whom-inner">
-    <div class="for-whom-eyebrow reveal">Who This Is For</div>
-    <div class="for-whom-grid">
-      <div class="reveal">
-        <h2 class="for-whom-headline">For the person whose life is rich — and whose home <em>reflects that story.</em></h2>
-        <p class="for-whom-body">You've made a life worth coming home to. You move between this city and somewhere else. When you're here, your home deserves to feel like you — considered, specific, alive.</p>
-        <p class="for-whom-body">You've walked into someone's home and felt it. That quality a room has when someone with genuine taste has touched it. Skyline Garden brings that to yours.</p>
+    <div class="reveal">
+      <h2 class="for-whom-headline">For the person whose life is rich — and whose home <em>reflects that story.</em></h2>
+      <p class="for-whom-body">You've made a life worth coming home to. When you're here, your home deserves to feel like you — considered, specific, alive.</p>
+      <p class="for-whom-body">You've walked into someone's home and felt it. That quality a room has when someone with genuine taste has touched it. Skyline Garden brings that to yours.</p>
+    </div>
+    <div class="reveal d2">
+      <div class="for-whom-callout">
+        <div class="for-whom-callout-label">Residential</div>
+        <p class="for-whom-callout-text">Your home, your garden. Arrangements that make it feel like the life you've built.</p>
       </div>
-      <div class="reveal d2">
-        <div class="for-whom-callout">
-          <div class="for-whom-callout-label">Residential</div>
-          <p class="for-whom-callout-text">Your home, your garden. Arrangements that make it feel like the life you've built.</p>
-        </div>
-        <div class="for-whom-callout">
-          <div class="for-whom-callout-label">Corporate</div>
-          <p class="for-whom-callout-text">For offices, lobbies, and boardrooms that want to say something — without saying it.</p>
-        </div>
-        <div class="for-whom-callout">
-          <div class="for-whom-callout-label">Gift</div>
-          <p class="for-whom-callout-text">For someone who deserves something they wouldn't have chosen for themselves.</p>
-        </div>
+      <div class="for-whom-callout">
+        <div class="for-whom-callout-label">Corporate</div>
+        <p class="for-whom-callout-text">For offices, lobbies, and boardrooms that want to say something — without saying it.</p>
+      </div>
+      <div class="for-whom-callout">
+        <div class="for-whom-callout-label">Gift</div>
+        <p class="for-whom-callout-text">For someone who deserves something they wouldn't have chosen for themselves.</p>
       </div>
     </div>
   </div>
@@ -1087,7 +956,6 @@
 
 <!-- CTA -->
 <section class="cta-section" id="inquire">
-  <div class="cta-eyebrow reveal">Limited Availability · Manhattan</div>
   <h2 class="cta-headline reveal">Your home is waiting<br>to feel <em>alive.</em></h2>
   <p class="cta-sub reveal">Shamoun works with a small number of clients at a time.<br>If you're ready, he'd love to hear from you.</p>
   <div class="cta-buttons reveal">
